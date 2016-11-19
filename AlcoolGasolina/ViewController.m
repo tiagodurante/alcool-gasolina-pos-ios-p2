@@ -156,7 +156,8 @@
                           valorGasolina.text, @"gasolina",
                           nil];
 
-    [dados addObject:item];
+    //[dados addObject:item]; //salva sempre abaixo dos resultados anteriores
+    [dados insertObject:item atIndex:0]; //adiciona sempre acima de todos os resultados
     [dados writeToFile:filePath atomically:YES];
     
     [self listarDados];
