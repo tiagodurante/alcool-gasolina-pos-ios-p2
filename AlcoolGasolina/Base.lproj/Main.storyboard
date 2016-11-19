@@ -245,7 +245,7 @@
                                     <outlet property="delegate" destination="Kz6-BB-lI3" id="cKz-XU-xk5"/>
                                 </connections>
                             </webView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="cVW-FE-7Cq">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="cVW-FE-7Cq">
                                 <rect key="frame" x="284" y="32" width="20" height="20"/>
                                 <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
@@ -347,7 +347,7 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="XIO-CO-duK"/>
-                                    <barButtonItem title="Estilo do mapa" id="H5v-lc-gYc">
+                                    <barButtonItem title="Mudar Estilo" id="H5v-lc-gYc">
                                         <connections>
                                             <action selector="tipo:" destination="CHF-Ul-fYB" id="jOW-sH-K0Z"/>
                                         </connections>

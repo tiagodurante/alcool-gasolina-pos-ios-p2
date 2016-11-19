@@ -20,7 +20,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    NSString *urlString = @"http://45.55.223.171:8000";
+    NSString *urlString = @"http://www.portalaltonia.com.br";
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
