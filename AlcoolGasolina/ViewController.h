@@ -7,9 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Social/Social.h>
+#import <MessageUI/MessageUI.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UITextFieldDelegate, UIActionSheetDelegate, MFMailComposeViewControllerDelegate> {
+    NSString *filePath;
+    NSMutableArray *dados;
+}
 
+@property (strong, nonatomic) IBOutlet UITextField *valorAlcool;
+@property (nonatomic, strong) IBOutlet UITextField *valorGasolina;
+
+-(IBAction)calcular:(id)sender;
+-(IBAction)compartilhar:(id)sender;
+-(IBAction)gravar:(id)sender;
 
 @end
 
