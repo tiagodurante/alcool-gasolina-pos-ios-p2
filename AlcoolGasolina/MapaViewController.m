@@ -1,30 +1,22 @@
 //
-//  DetalhesViewController.m
+//  MapaViewController.m
 //  AlcoolGasolina
 //
 //  Created by Faculdade Alfa on 19/11/16.
 //  Copyright (c) 2016 Faculdade Alfa. All rights reserved.
 //
 
-#import "DetalhesViewController.h"
+#import "MapaViewController.h"
 
-@interface DetalhesViewController ()
+@interface MapaViewController ()
 
 @end
 
-@implementation DetalhesViewController
-
-@synthesize item, lbAlcool, lbGasolina;
+@implementation MapaViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    //carrega as informações nos labels da view
-    if (item) {
-        lbGasolina.text = [NSString stringWithFormat:@"Gasolina: %@", [item objectForKey:@"gasolina"]];
-        lbAlcool.text = [NSString stringWithFormat:@"Alcool: %@", [item objectForKey:@"alcool"]];
-    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,6 +27,5 @@
 -(IBAction)voltar:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
 
 @end

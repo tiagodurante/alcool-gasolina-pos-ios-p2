@@ -11,7 +11,7 @@
 @interface HistoricoViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) IBOutlet UITableView *tabela;
-@property (strong, nonatomic) NSArray *dados;
+@property (strong, nonatomic) NSMutableArray *dados;
 
 -(IBAction)voltar:(id)sender;
 

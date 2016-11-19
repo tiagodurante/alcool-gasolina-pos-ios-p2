@@ -52,6 +52,7 @@
 
     [alerta show];
     alerta = nil;
+    [self gravar];
 }
 
 -(IBAction)compartilhar:(id)sender {
@@ -150,7 +151,7 @@
     // Dispose of any resources that can be recreated.
 }
 
--(IBAction)gravar:(id)sender {
+-(void)gravar {
     NSDictionary *item = [NSDictionary dictionaryWithObjectsAndKeys:
                           valorAlcool.text, @"alcool",
                           valorGasolina.text, @"gasolina",

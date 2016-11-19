@@ -62,15 +62,6 @@
                                     <action selector="compartilhar:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cys-gF-V7l"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NvO-mk-VeX">
-                                <rect key="frame" x="16" y="225" width="46" height="30"/>
-                                <state key="normal" title="Gravar">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="gravar:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="khc-vB-uH2"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgZ-t5-Gag">
                                 <rect key="frame" x="242" y="225" width="62" height="30"/>
                                 <state key="normal" title="Histórico">
@@ -78,6 +69,25 @@
                                 </state>
                                 <connections>
                                     <segue destination="jxk-Tq-ASh" kind="presentation" modalTransitionStyle="coverVertical" id="Cpd-5t-cps"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aT0-pI-SMB">
+                                <rect key="frame" x="104" y="300" width="112" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label="opa"/>
+                                <state key="normal" title="Site da empresa">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Kz6-BB-lI3" kind="show" id="bdr-E1-AnN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TyC-EK-yIT">
+                                <rect key="frame" x="97" y="348" width="126" height="30"/>
+                                <state key="normal" title="Localização (GPS)">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="CHF-Ul-fYB" kind="show" id="CxG-wQ-NLv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -105,20 +115,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YdY-ZO-9od">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
-                                <items>
-                                    <navigationItem title="Histórico" id="zjG-pE-Sfe">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="iuT-3a-2F2">
-                                            <connections>
-                                                <action selector="voltar:" destination="jxk-Tq-ASh" id="R6d-t2-jeK"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="dg3-ic-wxb">
-                                <rect key="frame" x="0.0" y="72" width="320" height="408"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Celula" textLabel="vQO-ax-H2a" detailTextLabel="Cgs-Mt-ZEj" style="IBUITableViewCellStyleSubtitle" id="WYj-oU-Sgs">
@@ -150,6 +148,23 @@
                                     <outlet property="delegate" destination="jxk-Tq-ASh" id="LH7-Im-EL1"/>
                                 </connections>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YdY-ZO-9od">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Histórico" id="zjG-pE-Sfe">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="iuT-3a-2F2">
+                                            <connections>
+                                                <action selector="voltar:" destination="jxk-Tq-ASh" id="R6d-t2-jeK"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Limpar" id="7ww-Ec-Puu">
+                                            <connections>
+                                                <action selector="excluirTodos:" destination="jxk-Tq-ASh" id="5aG-Gn-yeu"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -190,7 +205,11 @@
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="Detalhes" id="kls-l4-ql9">
-                                        <barButtonItem key="backBarButtonItem" title="Reply" id="nzt-gu-XcX"/>
+                                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="7EE-q4-qia">
+                                            <connections>
+                                                <action selector="voltar:" destination="07U-5B-Mex" id="CN7-NY-cay"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -198,10 +217,136 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="lbAlcool" destination="pyD-bb-MvQ" id="ZvM-Ar-fZy"/>
+                        <outlet property="lbGasolina" destination="giS-vL-rDU" id="qtX-hp-yzQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HUX-q9-UbP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="996" y="175"/>
+        </scene>
+        <!--Site View Controller-->
+        <scene sceneID="LGc-NG-vEY">
+            <objects>
+                <viewController id="Kz6-BB-lI3" customClass="SiteViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hCn-nI-bd7"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rum-D2-05N"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="69m-Hr-ita">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zkf-ta-7KI">
+                                <rect key="frame" x="0.0" y="64" width="320" height="372"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Kz6-BB-lI3" id="cKz-XU-xk5"/>
+                                </connections>
+                            </webView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="cVW-FE-7Cq">
+                                <rect key="frame" x="284" y="32" width="20" height="20"/>
+                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fma-HJ-ka7">
+                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="rewind" id="84w-z7-a7G">
+                                        <connections>
+                                            <action selector="goBack" destination="zkf-ta-7KI" id="csU-D7-7Eo"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="yuj-lb-dqs"/>
+                                    <barButtonItem systemItem="refresh" id="OuK-GK-Cwf">
+                                        <connections>
+                                            <action selector="reload" destination="zkf-ta-7KI" id="Bhe-01-pmy"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="rXi-JH-4JG"/>
+                                    <barButtonItem systemItem="stop" id="QmN-v7-9lb">
+                                        <connections>
+                                            <action selector="stopLoading" destination="zkf-ta-7KI" id="bgm-B4-kgN"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="YGg-hd-qZB"/>
+                                    <barButtonItem systemItem="fastForward" id="sh3-zh-x3Y">
+                                        <connections>
+                                            <action selector="goForward" destination="zkf-ta-7KI" id="rZn-hm-AJD"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E29-2W-tkE">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Site" id="EBu-Rd-n6t">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="LIe-tY-O7C">
+                                            <connections>
+                                                <action selector="voltar:" destination="Kz6-BB-lI3" id="RqU-GU-zwv"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="spin" destination="cVW-FE-7Cq" id="pC1-Ed-yWX"/>
+                        <outlet property="website" destination="zkf-ta-7KI" id="F6E-41-orW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EE2-53-NG0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="801"/>
+        </scene>
+        <!--Mapa View Controller-->
+        <scene sceneID="3SZ-ry-D9H">
+            <objects>
+                <viewController id="CHF-Ul-fYB" customClass="MapaViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0Xd-gS-8Du"/>
+                        <viewControllerLayoutGuide type="bottom" id="l87-bs-pmb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bdb-eU-Jlf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B6D-aR-Z7n">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Localização" id="2iR-hl-zFE">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="qn3-Gq-J1W">
+                                            <connections>
+                                                <action selector="voltar:" destination="CHF-Ul-fYB" id="MCW-Hl-sSy"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1MY-j7-aKL">
+                                <rect key="frame" x="0.0" y="64" width="320" height="372"/>
+                            </mapView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YyW-XG-iEE">
+                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Alfa" id="cnx-5j-HWL"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Jkl-n9-cco"/>
+                                    <barButtonItem title="Onde estou?" id="wSa-C9-yx1"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="XIO-CO-duK"/>
+                                    <barButtonItem title="Estilo do mapa" id="H5v-lc-gYc"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wEf-cw-01y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-126" y="801"/>
         </scene>
     </scenes>
 </document>

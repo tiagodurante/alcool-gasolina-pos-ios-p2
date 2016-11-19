@@ -14,4 +14,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *lbAlcool;
 @property (strong, nonatomic) NSDictionary *item;
 
+-(IBAction)voltar:(id)sender;
+
 @end

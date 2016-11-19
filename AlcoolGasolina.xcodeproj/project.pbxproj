@@ -18,6 +18,10 @@
 		037667321DCE2C5B000B41B8 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 037667311DCE2C5B000B41B8 /* MessageUI.framework */; };
 		037667351DCE46E5000B41B8 /* HistoricoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 037667341DCE46E5000B41B8 /* HistoricoViewController.m */; };
 		039B20051DE0775A00E6953C /* DetalhesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039B20041DE0775A00E6953C /* DetalhesViewController.m */; };
+		039B20081DE09CF700E6953C /* SiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039B20071DE09CF700E6953C /* SiteViewController.m */; };
+		039B200B1DE0AF5700E6953C /* MapaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039B200A1DE0AF5700E6953C /* MapaViewController.m */; };
+		039B200D1DE0B28400E6953C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039B200C1DE0B28400E6953C /* MapKit.framework */; };
+		039B200F1DE0B28D00E6953C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039B200E1DE0B28D00E6953C /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +54,12 @@
 		037667341DCE46E5000B41B8 /* HistoricoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoricoViewController.m; sourceTree = "<group>"; };
 		039B20031DE0775A00E6953C /* DetalhesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetalhesViewController.h; sourceTree = "<group>"; };
 		039B20041DE0775A00E6953C /* DetalhesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetalhesViewController.m; sourceTree = "<group>"; };
+		039B20061DE09CF700E6953C /* SiteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiteViewController.h; sourceTree = "<group>"; };
+		039B20071DE09CF700E6953C /* SiteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiteViewController.m; sourceTree = "<group>"; };
+		039B20091DE0AF5700E6953C /* MapaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapaViewController.h; sourceTree = "<group>"; };
+		039B200A1DE0AF5700E6953C /* MapaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapaViewController.m; sourceTree = "<group>"; };
+		039B200C1DE0B28400E6953C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		039B200E1DE0B28D00E6953C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +67,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				039B200F1DE0B28D00E6953C /* CoreLocation.framework in Frameworks */,
+				039B200D1DE0B28400E6953C /* MapKit.framework in Frameworks */,
 				037667321DCE2C5B000B41B8 /* MessageUI.framework in Frameworks */,
 				037667301DCE0736000B41B8 /* Social.framework in Frameworks */,
 			);
@@ -75,6 +87,8 @@
 		037666FD1DCDCF21000B41B8 = {
 			isa = PBXGroup;
 			children = (
+				039B200E1DE0B28D00E6953C /* CoreLocation.framework */,
+				039B200C1DE0B28400E6953C /* MapKit.framework */,
 				037667311DCE2C5B000B41B8 /* MessageUI.framework */,
 				0376672F1DCE0736000B41B8 /* Social.framework */,
 				037667081DCDCF21000B41B8 /* AlcoolGasolina */,
@@ -107,6 +121,10 @@
 				037667091DCDCF21000B41B8 /* Supporting Files */,
 				037667101DCDCF22000B41B8 /* ViewController.h */,
 				037667111DCDCF22000B41B8 /* ViewController.m */,
+				039B20061DE09CF700E6953C /* SiteViewController.h */,
+				039B20071DE09CF700E6953C /* SiteViewController.m */,
+				039B20091DE0AF5700E6953C /* MapaViewController.h */,
+				039B200A1DE0AF5700E6953C /* MapaViewController.m */,
 			);
 			path = AlcoolGasolina;
 			sourceTree = "<group>";
@@ -238,8 +256,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				037667121DCDCF22000B41B8 /* ViewController.m in Sources */,
+				039B20081DE09CF700E6953C /* SiteViewController.m in Sources */,
 				0376670F1DCDCF22000B41B8 /* AppDelegate.m in Sources */,
 				0376670C1DCDCF22000B41B8 /* main.m in Sources */,
+				039B200B1DE0AF5700E6953C /* MapaViewController.m in Sources */,
 				039B20051DE0775A00E6953C /* DetalhesViewController.m in Sources */,
 				037667351DCE46E5000B41B8 /* HistoricoViewController.m in Sources */,
 			);

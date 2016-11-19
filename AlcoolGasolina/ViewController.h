@@ -20,7 +20,6 @@
 
 -(IBAction)calcular:(id)sender;
 -(IBAction)compartilhar:(id)sender;
--(IBAction)gravar:(id)sender;
 
 @end
 
