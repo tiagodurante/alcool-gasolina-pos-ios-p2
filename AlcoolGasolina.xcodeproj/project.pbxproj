@@ -17,6 +17,7 @@
 		037667301DCE0736000B41B8 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0376672F1DCE0736000B41B8 /* Social.framework */; };
 		037667321DCE2C5B000B41B8 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 037667311DCE2C5B000B41B8 /* MessageUI.framework */; };
 		037667351DCE46E5000B41B8 /* HistoricoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 037667341DCE46E5000B41B8 /* HistoricoViewController.m */; };
+		039B20051DE0775A00E6953C /* DetalhesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039B20041DE0775A00E6953C /* DetalhesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		037667311DCE2C5B000B41B8 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		037667331DCE46E5000B41B8 /* HistoricoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoricoViewController.h; sourceTree = "<group>"; };
 		037667341DCE46E5000B41B8 /* HistoricoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoricoViewController.m; sourceTree = "<group>"; };
+		039B20031DE0775A00E6953C /* DetalhesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetalhesViewController.h; sourceTree = "<group>"; };
+		039B20041DE0775A00E6953C /* DetalhesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetalhesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,14 +97,16 @@
 			children = (
 				0376670D1DCDCF22000B41B8 /* AppDelegate.h */,
 				0376670E1DCDCF22000B41B8 /* AppDelegate.m */,
-				037667101DCDCF22000B41B8 /* ViewController.h */,
-				037667111DCDCF22000B41B8 /* ViewController.m */,
+				039B20031DE0775A00E6953C /* DetalhesViewController.h */,
+				039B20041DE0775A00E6953C /* DetalhesViewController.m */,
 				037667331DCE46E5000B41B8 /* HistoricoViewController.h */,
 				037667341DCE46E5000B41B8 /* HistoricoViewController.m */,
-				037667131DCDCF22000B41B8 /* Main.storyboard */,
 				037667161DCDCF22000B41B8 /* Images.xcassets */,
 				037667181DCDCF22000B41B8 /* LaunchScreen.xib */,
+				037667131DCDCF22000B41B8 /* Main.storyboard */,
 				037667091DCDCF21000B41B8 /* Supporting Files */,
+				037667101DCDCF22000B41B8 /* ViewController.h */,
+				037667111DCDCF22000B41B8 /* ViewController.m */,
 			);
 			path = AlcoolGasolina;
 			sourceTree = "<group>";
@@ -235,6 +240,7 @@
 				037667121DCDCF22000B41B8 /* ViewController.m in Sources */,
 				0376670F1DCDCF22000B41B8 /* AppDelegate.m in Sources */,
 				0376670C1DCDCF22000B41B8 /* main.m in Sources */,
+				039B20051DE0775A00E6953C /* DetalhesViewController.m in Sources */,
 				037667351DCE46E5000B41B8 /* HistoricoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,6 +436,7 @@
 				0376672B1DCDCF22000B41B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0376672C1DCDCF22000B41B8 /* Build configuration list for PBXNativeTarget "AlcoolGasolinaTests" */ = {
 			isa = XCConfigurationList;
@@ -438,6 +445,7 @@
 				0376672E1DCDCF22000B41B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

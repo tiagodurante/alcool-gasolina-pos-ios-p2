@@ -6,7 +6,9 @@
 //  Copyright (c) 2016 Faculdade Alfa. All rights reserved.
 //
 
+//importando views
 #import "HistoricoViewController.h"
+#import "DetalhesViewController.h"
 
 @interface HistoricoViewController ()
 
@@ -88,6 +90,26 @@
 
 -(IBAction)voltar:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+//abrir view detalhes sem fazer nada
+/*-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"telaDetalhe" sender:self];
+}*/
+
+//abrir view detalhes junto com alguns parametros
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"telaDetalhe"]) {
+        //busca o indice da linha selecinada na tabela
+        NSInteger row = [tabela.indexPathForSelectedRow row];
+        //carrega o item da tabela em um NSDictionary
+        NSDictionary *item = [dados objectAtIndex:row];
+        //instanciando a view de destino
+        DetalhesViewController *detalhes = segue.destinationViewController;
+        detalhes.item = item;
+        //desmarcando a linha na tabela
+        [tabela deselectRowAtIndexPath:tabela.indexPathForSelectedRow animated:YES];
+    }
 }
 
 @end
