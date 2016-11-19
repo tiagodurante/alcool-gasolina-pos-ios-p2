@@ -16,5 +16,8 @@
 @property (strong, nonatomic) IBOutlet CLLocationManager *locManager;
 
 -(IBAction)voltar:(id)sender;
+-(IBAction)alfa:(id)sender;
+-(IBAction)ondeEstou:(id)sender;
+-(IBAction)tipo:(id)sender;
 
 @end

@@ -117,7 +117,7 @@
         
         [email setSubject:@"Alcool ou gasolina?"];
         [email setMessageBody:[self retornarMensagem] isHTML:YES];
-        [email setToRecipients:[NSArray arrayWithObjects:@"contato@melhoresradios.com.br", @"marcosdiasvendramini@yahoo.com.br", nil]];
+        [email setToRecipients:[NSArray arrayWithObjects:@"tiagodurante@outlook.com.br", @"tiagonfs@gmail.com", @"tiagodurante@icloud.com", nil]];
         
         //NSData *anexo = [UIImagePNGRepresentation([UIImage imageNamed:@"Logo.png"])];
         //[email addAttachmentData:anexo mimeType:@"image/png" fileName:@"Logo.png"];
@@ -129,9 +129,9 @@
     }
 }
 
--(void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
+//-(void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
+//    [self dismissViewControllerAnimated:YES completion:nil];
+//}
 
 -(NSString *)retornarMensagem {
     float alcool = [valorAlcool.text floatValue];
@@ -162,6 +162,29 @@
     [dados writeToFile:filePath atomically:YES];
     
     [self listarDados];
+}
+
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    switch (result) {
+        case MFMailComposeResultSent:
+            NSLog(@"You sent the email.");
+            break;
+        case MFMailComposeResultSaved:
+            NSLog(@"You saved a draft of this email");
+            break;
+        case MFMailComposeResultCancelled:
+            NSLog(@"You cancelled sending this email.");
+            break;
+        case MFMailComposeResultFailed:
+            NSLog(@"Mail failed:  An error occurred when trying to compose this email");
+            break;
+        default:
+            NSLog(@"An error occurred when trying to compose this email");
+            break;
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 -(void)listarDados {
